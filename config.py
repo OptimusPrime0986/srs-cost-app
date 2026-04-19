@@ -63,7 +63,6 @@ INTEGRATION_COSTS = {
 # KEYWORD DICTIONARIES FOR NLP EXTRACTION
 # =============================================================================
 
-# Feature-related keywords
 FEATURE_KEYWORDS = [
     'feature', 'functionality', 'capability', 'module', 'component',
     'system shall', 'the system must', 'user can', 'user should',
@@ -75,7 +74,6 @@ FEATURE_KEYWORDS = [
     'report', 'dashboard', 'analytics', 'track', 'monitor'
 ]
 
-# Complexity indicators
 COMPLEXITY_INDICATORS = {
     'high': [
         'machine learning', 'artificial intelligence', 'ai', 'ml',
@@ -104,7 +102,6 @@ COMPLEXITY_INDICATORS = {
     ]
 }
 
-# Platform detection keywords
 PLATFORM_KEYWORDS = {
     'web': [
         'web application', 'website', 'web app', 'browser',
@@ -127,7 +124,6 @@ PLATFORM_KEYWORDS = {
     ]
 }
 
-# UI Complexity keywords
 UI_KEYWORDS = {
     'premium': [
         'animation', 'animated', '3d', 'three dimensional',
@@ -150,7 +146,6 @@ UI_KEYWORDS = {
     ]
 }
 
-# Integration detection keywords
 INTEGRATION_KEYWORDS = {
     'payment_gateway': [
         'payment', 'razorpay', 'stripe', 'paypal', 'paytm',
@@ -211,7 +206,6 @@ INTEGRATION_KEYWORDS = {
     ]
 }
 
-# Module detection patterns
 MODULE_PATTERNS = [
     r'module\s*[:\-]?\s*(\w+[\w\s]*)',
     r'(\w+)\s+module',
@@ -236,7 +230,6 @@ TEAM_ROLES = {
     'business_analyst': {'rate_per_week': 35000, 'min_features': 20}
 }
 
-# Development phases with time allocation percentages
 DEVELOPMENT_PHASES = {
     'requirement_analysis': 0.10,
     'design': 0.15,
@@ -273,7 +266,6 @@ COST_REDUCTION_SUGGESTIONS = [
     }
 ]
 
-# Risk indicators
 RISK_INDICATORS = {
     'high': [
         'no timeline specified', 'unclear requirements', 'multiple platforms',
@@ -286,4 +278,116 @@ RISK_INDICATORS = {
     'low': [
         'standard features', 'single platform', 'basic ui'
     ]
+}
+
+# =============================================================================
+# COCOMO CONFIGURATION
+# =============================================================================
+
+COCOMO_COST_PER_PERSON_MONTH = 180000
+DEFAULT_BUFFER_PERCENTAGE = 10
+
+COCOMO_COEFFICIENTS = {
+    'organic': {
+        'a': 2.4,
+        'b': 1.05,
+        'c': 2.5,
+        'd': 0.38
+    },
+    'semi_detached': {
+        'a': 3.0,
+        'b': 1.12,
+        'c': 2.5,
+        'd': 0.35
+    },
+    'embedded': {
+        'a': 3.6,
+        'b': 1.20,
+        'c': 2.5,
+        'd': 0.32
+    }
+}
+
+COCOMO_EAF_FACTORS = {
+    'required_reliability': {
+        'low': 0.88,
+        'nominal': 1.00,
+        'high': 1.15,
+        'very_high': 1.40
+    },
+    'product_complexity': {
+        'low': 0.85,
+        'nominal': 1.00,
+        'high': 1.15,
+        'very_high': 1.30
+    },
+    'platform_complexity': {
+        'low': 0.90,
+        'nominal': 1.00,
+        'high': 1.10,
+        'very_high': 1.20
+    },
+    'team_experience': {
+        'very_low': 1.29,
+        'low': 1.13,
+        'nominal': 1.00,
+        'high': 0.91,
+        'very_high': 0.82
+    }
+}
+
+# =============================================================================
+# COCOMO CONFIGURATION
+# =============================================================================
+
+COCOMO_COST_PER_PERSON_MONTH = 180000
+DEFAULT_BUFFER_PERCENTAGE = 10
+
+COCOMO_COEFFICIENTS = {
+    'organic': {
+        'a': 2.4,
+        'b': 1.05,
+        'c': 2.5,
+        'd': 0.38
+    },
+    'semi_detached': {
+        'a': 3.0,
+        'b': 1.12,
+        'c': 2.5,
+        'd': 0.35
+    },
+    'embedded': {
+        'a': 3.6,
+        'b': 1.20,
+        'c': 2.5,
+        'd': 0.32
+    }
+}
+
+COCOMO_EAF_FACTORS = {
+    'required_reliability': {
+        'low': 0.88,
+        'nominal': 1.00,
+        'high': 1.15,
+        'very_high': 1.40
+    },
+    'product_complexity': {
+        'low': 0.85,
+        'nominal': 1.00,
+        'high': 1.15,
+        'very_high': 1.30
+    },
+    'platform_complexity': {
+        'low': 0.90,
+        'nominal': 1.00,
+        'high': 1.10,
+        'very_high': 1.20
+    },
+    'team_experience': {
+        'very_low': 1.29,
+        'low': 1.13,
+        'nominal': 1.00,
+        'high': 0.91,
+        'very_high': 0.82
+    }
 }
