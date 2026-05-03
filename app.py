@@ -142,6 +142,8 @@ def main():
             help="Additional contingency for unknowns and scope changes."
         )
 
+        st.session_state["buffer_percentage"] = buffer_percentage   # ✅ ADD THIS LINE
+
         st.markdown("---")
         st.markdown("### 📌 Model")
         st.info("This app uses **COCOMO-based estimation only**.")
@@ -436,7 +438,7 @@ def display_cocomo_insights(features, estimate):
                 estimate.estimated_kloc,
                 estimate.effort_person_months,
                 estimate.timeline.total_months,
-                estimate.cost.buffer_cost
+                st.session_state.get("buffer_percentage", 10)
             ]
         })
 
